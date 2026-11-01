@@ -102,14 +102,15 @@ function SceneEditor({
       >
         {draft === scene ? (
           <>
-            <Check size={14} /> Scene up to date
+            <Check size={14} /> Scene saved
           </>
         ) : (
           <>
-            Update scene <ArrowUpRight size={14} />
+            Apply typed edits <ArrowUpRight size={14} />
           </>
         )}
       </button>
+      <p className="field-help">Spoken context updates automatically. This control applies your typed edits.</p>
     </>
   );
 }

@@ -20,6 +20,7 @@ import {
   clientTools,
   elevenRequest,
   parseJoin,
+  pickupInstruction,
 } from "./agent";
 import { MediaScope } from "./media";
 import { speakerLabel } from "./transcript";
@@ -243,7 +244,7 @@ export function useAlibi() {
         if (!fence.current.accepts(epoch)) return;
         if (openAIKeyRef.current.trim()) requestPortrait(p);
         session.current?.sendContextualUpdate(
-          `Joined character after a simulated ring: ${JSON.stringify({ id: joined.id, name: joined.name, personality: joined.personality, pronouns: joined.pronouns, voice_label: joined.voice.label })}. They can now speak. Default label is untagged. All other labels require exact XML tags.`,
+          `Joined character after a simulated ring: ${JSON.stringify({ id: joined.id, name: joined.name, personality: joined.personality, pronouns: joined.pronouns, voice_label: joined.voice.label })}. ${pickupInstruction} Default label is untagged. All other labels require exact XML tags.`,
         );
       }
     } catch (e) {
@@ -499,6 +500,7 @@ export function useAlibi() {
             if (openAIKeyRef.current.trim()) requestPortrait(p);
             return {
               joined: true,
+              pickup_instruction: pickupInstruction,
               id: joined.id,
               name: joined.name,
               personality: joined.personality,
