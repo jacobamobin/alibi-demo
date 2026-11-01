@@ -49,14 +49,5 @@ Your key needs permissions for voices, agents, tools, and conversation tokens, a
 
 On iPhone, export one person from Contacts → Share Contact → Save to Files, then choose the .vcf in Add contact. The browser does not have automatic address-book access. JPEG/PNG embedded photos are supported; otherwise choose a photo separately. A suggested voice is preferred: if that slot is occupied, another distinct prepared voice is used for the group call.
 
-## Verification boundaries
-
-The original live iPhone proof passed on November 1, 2026: the user reported three participants with distinct voices, including a character inviting someone new. An English model mismatch causing provider HTTP400 was fixed with eleven_flash_v2.
-
-Roster, invitations, cancellation, voice limits, name ambiguity, payloads, transcript attribution, scene capture/mute, and muted SDK startup have automated checks. The new home microphone and WhatsApp-style extension are separately browser-tested; physical-device Scribe capture requires user readback after deployment.
-
-Contact studio has parser, AI schema/error, persistence-merge and image-exclusion checks. Browser QA verified photo upload, manual review, vCard import/error handling, save/edit/refresh persistence and invitation into a silent call. A real OpenAI draft from Jamie’s generated portrait passed on November 1, 2026 (age range20–35, personality, Will voice); the ElevenLabs sample played and the profile saved. A live call also invented and rang DJ Nova after name clarification, motivating the newer unnamed-role prompt. The revised natural invitation sequence, runtime portrait API, and iPhone vCard picker require further live/device verification; unit fixtures do not establish those.
-
-The earlier native scaffold is preserved on `codex/native-ios`; it has not been compiled or installed. Xcode installation was blocked by device management, so the active implementation is the web app in `web/`.
 
 See the [web design](docs/superpowers/specs/2026-11-01-alibi-web-design.md).
