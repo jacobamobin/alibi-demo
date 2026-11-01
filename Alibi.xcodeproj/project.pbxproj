@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28AE366F4FA5436F2837E0E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D61A6414D90F272DC27BD01 /* Assets.xcassets */; };
+		313E91B4D9C37253820390BB /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B510257528B730431DFF726 /* Fixtures.swift */; };
+		53D0652FE777DC03B850F75E /* KeychainCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EAB27A05B2EDBECCCC1E6E /* KeychainCredentialStore.swift */; };
+		5F1C55164F548716FD7243C3 /* ElevenLabsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87EDA5D9A7C163459224ADC /* ElevenLabsAPI.swift */; };
+		7A1E0752DAD2F5ED572831D6 /* AlibiCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE05169FD7DBD69D7ED55AF /* AlibiCore */; };
+		A41464CF32F29373DE7CFC44 /* ElevenLabs in Frameworks */ = {isa = PBXBuildFile; productRef = 5D1EEA8519051A86136D7C32 /* ElevenLabs */; };
+		C1078A5029C83C43661D6191 /* AlibiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393BE93B725017FB2E784A6 /* AlibiUITests.swift */; };
+		D849EDF6A90FB28633C4C155 /* AlibiCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9926BE6ECE557E1685DED68A /* AlibiCore */; };
+		EFA6803EFACD42BD5F9837FE /* CallRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522083B2E943B7C1A9F47A0D /* CallRosterTests.swift */; };
+		F1D2A56A86844E444E04AFD2 /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B2C5407CF4D8C7975E49C /* AppStoreModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		159B9FB608AA686345394C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20AE31D164F8A9291AD57D4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9543A8345B1FF1B158F0345E;
+			remoteInfo = Alibi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		020B2C5407CF4D8C7975E49C /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
+		0A31C1B1D0C66356035FF747 /* LarpHacks1 2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "LarpHacks1 2"; path = .; sourceTree = SOURCE_ROOT; };
+		2B510257528B730431DFF726 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		4D61A6414D90F272DC27BD01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D8A799D26866F1DA68F0909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		522083B2E943B7C1A9F47A0D /* CallRosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRosterTests.swift; sourceTree = "<group>"; };
+		57915FEADE1A3CD182453FAB /* AlibiUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AlibiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63581389A9F5A4D323EB61D4 /* AlibiCoreTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AlibiCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A87EDA5D9A7C163459224ADC /* ElevenLabsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenLabsAPI.swift; sourceTree = "<group>"; };
+		B393BE93B725017FB2E784A6 /* AlibiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlibiUITests.swift; sourceTree = "<group>"; };
+		F0EAB27A05B2EDBECCCC1E6E /* KeychainCredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialStore.swift; sourceTree = "<group>"; };
+		F2C32045994CFAD71266B02C /* Alibi.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Alibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C93EA5982714B697A45EA788 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1E0752DAD2F5ED572831D6 /* AlibiCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F316483E678CE49EE2B4F030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D849EDF6A90FB28633C4C155 /* AlibiCore in Frameworks */,
+				A41464CF32F29373DE7CFC44 /* ElevenLabs in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		470689EDBD0E14A44D6B3485 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				0A31C1B1D0C66356035FF747 /* LarpHacks1 2 */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		528A35E4D558F1CF7779F485 = {
+			isa = PBXGroup;
+			children = (
+				FFAF2AA8A454A1C8F4CA7587 /* Alibi */,
+				B694181E6F0958DB13B10C34 /* AlibiCoreTests */,
+				CDD5FC1C31FC308B1C26F155 /* AlibiUITests */,
+				470689EDBD0E14A44D6B3485 /* Packages */,
+				CCFAE169C28E0F9AB84BBF81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		567844A8822F9A86451AA0C4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				020B2C5407CF4D8C7975E49C /* AppStoreModel.swift */,
+				2B510257528B730431DFF726 /* Fixtures.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5CBF71251155D43CA8810204 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D61A6414D90F272DC27BD01 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B694181E6F0958DB13B10C34 /* AlibiCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				522083B2E943B7C1A9F47A0D /* CallRosterTests.swift */,
+			);
+			name = AlibiCoreTests;
+			path = Tests/AlibiCoreTests;
+			sourceTree = "<group>";
+		};
+		B712B1FD18F178BB2C7F49C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A87EDA5D9A7C163459224ADC /* ElevenLabsAPI.swift */,
+				F0EAB27A05B2EDBECCCC1E6E /* KeychainCredentialStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CCFAE169C28E0F9AB84BBF81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2C32045994CFAD71266B02C /* Alibi.app */,
+				63581389A9F5A4D323EB61D4 /* AlibiCoreTests.xctest */,
+				57915FEADE1A3CD182453FAB /* AlibiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDD5FC1C31FC308B1C26F155 /* AlibiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B393BE93B725017FB2E784A6 /* AlibiUITests.swift */,
+			);
+			path = AlibiUITests;
+			sourceTree = "<group>";
+		};
+		FFAF2AA8A454A1C8F4CA7587 /* Alibi */ = {
+			isa = PBXGroup;
+			children = (
+				4D8A799D26866F1DA68F0909 /* Info.plist */,
+				567844A8822F9A86451AA0C4 /* App */,
+				5CBF71251155D43CA8810204 /* Resources */,
+				B712B1FD18F178BB2C7F49C1 /* Services */,
+			);
+			path = Alibi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77C00C16F9F3B4E467C28ECE /* AlibiCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07F170E057E3424C1696D24 /* Build configuration list for PBXNativeTarget "AlibiCoreTests" */;
+			buildPhases = (
+				FE6DC9F1EAEF0548414018DB /* Sources */,
+				C93EA5982714B697A45EA788 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlibiCoreTests;
+			packageProductDependencies = (
+				2FE05169FD7DBD69D7ED55AF /* AlibiCore */,
+			);
+			productName = AlibiCoreTests;
+			productReference = 63581389A9F5A4D323EB61D4 /* AlibiCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9543A8345B1FF1B158F0345E /* Alibi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B889BB56542AA441236673D3 /* Build configuration list for PBXNativeTarget "Alibi" */;
+			buildPhases = (
+				D7335649BC26C1BE34D5CE5A /* Sources */,
+				6B6EF18A64018657CEF58919 /* Resources */,
+				F316483E678CE49EE2B4F030 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alibi;
+			packageProductDependencies = (
+				9926BE6ECE557E1685DED68A /* AlibiCore */,
+				5D1EEA8519051A86136D7C32 /* ElevenLabs */,
+			);
+			productName = Alibi;
+			productReference = F2C32045994CFAD71266B02C /* Alibi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6A1FAAB07A0EB592A3BEF0B /* AlibiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7234215C6B434BF8822A7B40 /* Build configuration list for PBXNativeTarget "AlibiUITests" */;
+			buildPhases = (
+				B9FE73CA18B56B438C469647 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18218290764C0896568FEE15 /* PBXTargetDependency */,
+			);
+			name = AlibiUITests;
+			packageProductDependencies = (
+			);
+			productName = AlibiUITests;
+			productReference = 57915FEADE1A3CD182453FAB /* AlibiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20AE31D164F8A9291AD57D4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					77C00C16F9F3B4E467C28ECE = {
+						DevelopmentTeam = "";
+					};
+					9543A8345B1FF1B158F0345E = {
+						DevelopmentTeam = "";
+					};
+					D6A1FAAB07A0EB592A3BEF0B = {
+						DevelopmentTeam = "";
+						TestTargetID = 9543A8345B1FF1B158F0345E;
+					};
+				};
+			};
+			buildConfigurationList = 269E05F920CC5937E3820114 /* Build configuration list for PBXProject "Alibi" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 528A35E4D558F1CF7779F485;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C73030375D221F8562D690CD /* XCRemoteSwiftPackageReference "elevenlabs-swift-sdk" */,
+				B272E47B1A899C293D1F0565 /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CCFAE169C28E0F9AB84BBF81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9543A8345B1FF1B158F0345E /* Alibi */,
+				77C00C16F9F3B4E467C28ECE /* AlibiCoreTests */,
+				D6A1FAAB07A0EB592A3BEF0B /* AlibiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B6EF18A64018657CEF58919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AE366F4FA5436F2837E0E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9FE73CA18B56B438C469647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1078A5029C83C43661D6191 /* AlibiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7335649BC26C1BE34D5CE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1D2A56A86844E444E04AFD2 /* AppStoreModel.swift in Sources */,
+				5F1C55164F548716FD7243C3 /* ElevenLabsAPI.swift in Sources */,
+				313E91B4D9C37253820390BB /* Fixtures.swift in Sources */,
+				53D0652FE777DC03B850F75E /* KeychainCredentialStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6DC9F1EAEF0548414018DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA6803EFACD42BD5F9837FE /* CallRosterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18218290764C0896568FEE15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9543A8345B1FF1B158F0345E /* Alibi */;
+			targetProxy = 159B9FB608AA686345394C23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E6587DC99CB6DCF0060EA2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Alibi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.alibi.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B91EA2DAA543F9D447B0393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.alibi.AlibiUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alibi;
+			};
+			name = Debug;
+		};
+		5ABADB3BB382D12CAEB8196B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.alibi.AlibiCoreTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		86BAC3FA2B4D8B0B4654ABAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93D756BCCE8CC8D82F8D338A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A028C616528DBD7A90EE8D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.alibi.AlibiUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alibi;
+			};
+			name = Release;
+		};
+		DCB6F2E216CC7FC1C38DB1A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.alibi.AlibiCoreTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF5627587E30B97BEB9412BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Alibi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.alibi.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		269E05F920CC5937E3820114 /* Build configuration list for PBXProject "Alibi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93D756BCCE8CC8D82F8D338A /* Debug */,
+				86BAC3FA2B4D8B0B4654ABAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7234215C6B434BF8822A7B40 /* Build configuration list for PBXNativeTarget "AlibiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B91EA2DAA543F9D447B0393 /* Debug */,
+				A028C616528DBD7A90EE8D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B889BB56542AA441236673D3 /* Build configuration list for PBXNativeTarget "Alibi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5627587E30B97BEB9412BA /* Debug */,
+				0E6587DC99CB6DCF0060EA2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D07F170E057E3424C1696D24 /* Build configuration list for PBXNativeTarget "AlibiCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCB6F2E216CC7FC1C38DB1A6 /* Debug */,
+				5ABADB3BB382D12CAEB8196B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B272E47B1A899C293D1F0565 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C73030375D221F8562D690CD /* XCRemoteSwiftPackageReference "elevenlabs-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elevenlabs/elevenlabs-swift-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FE05169FD7DBD69D7ED55AF /* AlibiCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AlibiCore;
+		};
+		5D1EEA8519051A86136D7C32 /* ElevenLabs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C73030375D221F8562D690CD /* XCRemoteSwiftPackageReference "elevenlabs-swift-sdk" */;
+			productName = ElevenLabs;
+		};
+		9926BE6ECE557E1685DED68A /* AlibiCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AlibiCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 20AE31D164F8A9291AD57D4D /* Project object */;
+}

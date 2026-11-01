@@ -1,0 +1,59 @@
+.contact-photo-image{width:100%;height:100%;object-fit:cover;display:block}
+.contact-editor{margin-top:8px}
+.contact-editor fieldset{border:0;padding:0;margin:0;min-width:0}
+.contact-editor fieldset:disabled{opacity:.65}
+.contact-steps{display:flex;align-items:center;gap:14px;margin:2px 0 24px;color:#70848e;font-size:12px}
+.contact-steps>span{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.contact-steps b{font-weight:500}
+.contact-steps i{height:1px;background:#2a3a43;flex:1}
+.contact-steps .current,.contact-steps .done{color:#25d366}
+.contact-source{display:flex;border-radius:12px;background:#0b141a;padding:4px;gap:4px;margin-bottom:22px}
+.contact-source button{flex:1;background:transparent;color:#8ba0aa;border-radius:9px;padding:10px 6px;font-size:13px}
+.contact-source button[aria-pressed=true]{background:#263b45;color:#eff7f6}
+.contact-photo-picker{display:flex;align-items:center;gap:19px;margin-bottom:22px}
+.contact-photo-picker>button{border-radius:50%;padding:0;background:none;position:relative;flex-shrink:0}
+.contact-photo-picker .avatar{height:84px;width:84px;font-size:27px}
+.contact-photo-picker>button>span{position:absolute;right:0;bottom:0;display:grid;place-items:center;height:28px;width:28px;border:3px solid #111b21;background:#25d366;color:#071d13;border-radius:50%}
+.contact-photo-picker strong{font-size:16px;font-weight:600}
+.contact-photo-picker p{font-size:12px;color:#9aadb7;margin:6px 0 8px;line-height:1.5}
+.contact-photo-picker .text-button{font-size:12px;margin-right:15px}
+.file-input{display:none}
+.contact-import{width:100%;border:1px solid #30414b;border-radius:12px;padding:13px 14px;display:flex;align-items:center;gap:12px;background:transparent;color:#d8e5e9;text-align:left}
+.contact-import>svg{color:#25d366;flex-shrink:0}
+.contact-import span{font-size:13px}.contact-import small{display:block;color:#8298a4;font-size:11px;margin-top:3px}
+.contact-import-help{margin:9px 0 17px;color:#8da4b0;font-size:11px;line-height:1.65}
+.contact-import-help summary,.contact-identity summary{cursor:pointer}
+.contact-import-help p{margin:7px 0}
+.contact-editor .field-label{font-size:12px;margin-top:16px;margin-bottom:8px}
+.contact-editor input,.contact-editor select,.contact-editor textarea{border-radius:10px;background:#16252e;border-color:#2b3c46;color:#edf6f8}
+.contact-field-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.contact-field-row>div{min-width:0}
+.contact-ai-key{margin-top:4px}.contact-ai-key input{font-size:13px}
+.contact-editor .primary{margin-top:15px;gap:9px;font-size:14px;min-height:46px}
+.contact-editor .field-help{font-size:11px;line-height:1.7;margin-top:13px}
+.contact-manual{display:block;margin:15px auto 3px;font-size:13px}
+.contact-back{margin-bottom:20px;font-size:12px;display:flex;gap:7px;align-items:center}
+.contact-review-hero{display:flex;align-items:center;gap:15px;margin-bottom:17px}
+.contact-review-hero .avatar{height:68px;width:68px;flex-shrink:0;font-size:23px}
+.contact-review-hero strong{font-size:20px;line-height:1.3;overflow-wrap:anywhere;display:block}
+.contact-review-hero span{display:block;font-size:11px;margin-top:6px;color:#93aab4}
+.contact-draft-note{display:flex;align-items:flex-start;gap:9px;font-size:11px;line-height:1.7;background:#142d28;border-radius:10px;padding:12px;color:#9ccab8}
+.contact-draft-note svg{flex-shrink:0;margin-top:2px;color:#25d366}
+.contact-identity{margin:20px 0 6px;padding-bottom:15px;border-bottom:1px solid #263943;font-size:12px;color:#bdcdd4}
+.contact-identity summary span{float:right;font-size:10px;color:#7f97a3}
+.contact-voice-card{margin-top:21px;background:#0c171e;border:1px solid #263c48;padding:0 14px 14px;border-radius:14px}
+.contact-voice-card>p:not(.field-help){color:#acc0ca;font-size:12px;line-height:1.6;margin:11px 0}
+.contact-voice-card select{font-size:12px;padding-right:30px;text-overflow:ellipsis}
+.contact-voice-card .secondary{margin-top:15px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:13px;min-height:42px}
+.contact-voice-card audio{display:block;width:100%;margin:13px 0 0;height:40px}
+.contact-local{display:flex;align-items:flex-start;gap:6px}.contact-local svg{flex-shrink:0;margin-top:3px;color:#25d366}
+.contact-form-error{color:#ffc4bb;background:#3b2528;border:1px solid #613638;padding:13px;border-radius:10px;font-size:12px;line-height:1.6;margin-top:17px}
+.contact-notice{font-size:12px;line-height:1.6;color:#9bd9b6;padding:12px 0 0}
+.contact-progress{position:sticky;bottom:-1px;background:#18312e;color:#a9e7c4;padding:15px;border-radius:10px;display:flex;gap:9px;align-items:center;font-size:12px;margin-top:13px}
+.contact-progress svg{animation:contact-spin 1s linear infinite;flex-shrink:0}@keyframes contact-spin{to{transform:rotate(360deg)}}
+.profile-facts{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:-4px 0 24px}
+.profile-facts span{padding:6px 9px;border-radius:7px;background:#1d303a;color:#acc1cb;font-size:10px}
+.profile-edit-actions{display:flex;flex-direction:column;gap:14px;align-items:center;margin:12px 0 24px}
+.profile-edit-actions .secondary{min-height:42px}.danger{color:#f39a90}.contact-delete-confirm{font-size:12px;text-align:center;line-height:1.6}.contact-delete-confirm .text-button{margin:8px 12px}
+.wa-people-heading{gap:12px}.wa-people-heading h2{margin-right:auto}.wa-people-heading>button{display:flex;align-items:center;gap:5px;font-size:11px}
+.call-message{margin-top:16px;border:1px solid #2b404b;border-radius:12px;padding:12px;background:#101d25}.call-message label{font-size:12px;color:#c0d0d8;display:block;margin-bottom:9px}.call-message>div{display:flex;gap:7px}.call-message input{min-width:0;font-size:13px;padding:11px}.call-message button{background:#25d366;color:#071f12;border-radius:9px;padding:0 12px}.call-message p{font-size:10px;color:#849daa;line-height:1.6;margin:9px 0 0}.call-message input:disabled{opacity:.55}.portrait-pending{display:block;font-size:10px;color:#95b9a4;margin-top:5px}.profile-portrait-action{margin:10px 0 24px}.profile-portrait-action>.secondary{min-height:43px}
+@media(max-width:760px){.contact-editor .field-label{margin-top:17px}.contact-editor .contact-field-row input,.contact-editor .contact-field-row select{min-width:0;width:100%}.contact-steps{margin-top:4px;margin-bottom:22px}.contact-photo-picker .avatar{height:78px;width:78px}.contact-editor .primary{min-height:48px}}

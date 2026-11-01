@@ -1,0 +1,78 @@
+name: Alibi
+options:
+  bundleIdPrefix: ai.alibi
+  deploymentTarget:
+    iOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: targeted
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    TARGETED_DEVICE_FAMILY: "1,2"
+packages:
+  AlibiCore:
+    path: .
+  ElevenLabs:
+    url: https://github.com/elevenlabs/elevenlabs-swift-sdk.git
+    exactVersion: 3.4.0
+targets:
+  Alibi:
+    type: application
+    platform: iOS
+    sources:
+      - path: Alibi
+    dependencies:
+      - package: AlibiCore
+      - package: ElevenLabs
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ai.alibi.ios
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_PREVIEWS: YES
+    info:
+      path: Alibi/Info.plist
+      properties:
+        CFBundleDisplayName: Alibi
+        NSMicrophoneUsageDescription: Alibi uses your microphone so you can talk with the fictional people in your call.
+        NSContactsUsageDescription: Choose synthetic test contacts to add to Alibi.
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        ITSAppUsesNonExemptEncryption: false
+  AlibiCoreTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests/AlibiCoreTests
+    dependencies:
+      - package: AlibiCore
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+  AlibiUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: AlibiUITests
+    dependencies:
+      - target: Alibi
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Alibi
+schemes:
+  Alibi:
+    build:
+      targets:
+        Alibi: all
+    run:
+      config: Debug
+    test:
+      targets:
+        - AlibiCoreTests
+        - AlibiUITests
+      gatherCoverageData: true

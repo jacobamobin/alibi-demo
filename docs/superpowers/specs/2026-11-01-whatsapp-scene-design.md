@@ -1,0 +1,13 @@
+# WhatsApp-style calls and voice scene setup
+
+The user verified a real iPhone call with three distinct voices and a character inviting someone new. The provider HTTP400 was resolved by using eleven_flash_v2 for English. Preserve that working integration.
+
+The user now requests circular profile pictures, WhatsApp calling styling, ten invented contacts, and microphone-driven scene setup before joining. Speech should keep updating the scene in a live call; demo mute must stop capture and scene changes from speech.
+
+Implementation choices: keep the static Next.js app and direct ElevenLabs connection. The home screen has an explicit microphone button, before New call, which starts ElevenLabs Scribe realtime transcription using a single-use token minted directly with the user's in-memory key. Show Listening, captured context, and Demo mute on home. New call automatically includes all captured context; there is no forced setup wizard. The transcript becomes the shared scene. Stop and invalidate the transcription session before New call joins the voice agent. Muting stops pre-call transcription; late callbacks cannot change context. A muted join starts the live agent with the microphone disabled. Live user transcript events update scene immediately, and the agent's context tool can replace the scene with a concise updated summary. No separate OpenAI credential or backend is needed.
+
+Keep the three original fictional portraits and generate seven additional portraits. Use circular photos and monograms everywhere. Ten contacts: Owen, Maya, Leo, Noah, Zara, Finn, Alex, Amelia, Jules, Eli. Preserve the original three exact voices. Other contacts have preferred voices, assigned only on joining so invented people can still use unused slots. Once assigned, voices stay fixed for the call; ten slots total.
+
+Visual system: WhatsApp dark blue-black #0b141a, surfaces #111b21/#1f2c34, green #25d366, round profile photos, restrained system typography, rounded call control tray, red hang-up. Desktop retains equal thirds with people left, centered phone call, scene/transcript right. Phone shows only the app and sheets. No claim of WhatsApp affiliation or end-to-end encryption.
+
+Verification: test scene transcript commits/partials/mute/epoch fencing, live context replacement, ten contacts with unique preferred voices and an available slot for unknown joins, and existing roster/invitation/media checks. Browser-test staging, mute, joining, WhatsApp layout, and ten contacts at desktop and phone size. Validate Scribe with user-entered key and physical-phone readback separately from UI tests. Publish privately to the existing Site.

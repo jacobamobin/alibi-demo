@@ -1,0 +1,13 @@
+{
+  "name": "alibi-workspace",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@alibi/web",
+    "build": "node scripts/build-web.mjs",
+    "test": "npm run test --workspace=@alibi/web",
+    "typecheck": "npm run typecheck --workspace=@alibi/web"
+  }
+}
