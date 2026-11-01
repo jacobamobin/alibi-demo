@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { VoiceConversation } from "@elevenlabs/react";
 import {
   Roster,
@@ -29,7 +29,6 @@ import { callPerson, validateContact, mergeContacts, resolveCallName } from "./c
 import { readContacts, storeContact, eraseContact } from "./contact-store";
 import { PortraitJobs, generatePortrait, type PortraitState } from "./portraits";
 import { photoBlob, prepareContactPhoto } from "./contact-photo";
-import { attributedPersonId } from "./spectrum";
 export type Transcript = { id: string; who: string; text: string };
 export function useAlibi() {
   const [people, setPeople] = useState<Person[]>(starterPeople);
@@ -67,13 +66,11 @@ export function useAlibi() {
   const [sound, setSound] = useState(true);
   const [talking, setTalking] = useState(false);
   const [speaker, setSpeaker] = useState("");
-  const [speakerID, setSpeakerID] = useState("");
   const [elapsed, setElapsed] = useState(0);
   const fence = useRef(new SessionFence());
   const roster = useRef<Roster | null>(null);
   const invitations = useRef<Invitations | null>(null);
   const session = useRef<VoiceConversation | null>(null);
-  const readAudio = useCallback(() => session.current?.getOutputByteFrequencyData(), []);
   const mic = useRef<MediaStream | null>(null);
   const mediaScope = useRef<MediaScope | null>(null);
   const toolIDs = useRef<string[]>([]);
@@ -354,7 +351,6 @@ export function useAlibi() {
     setActivity([]);
     setFacts([]);
     setSpeaker("");
-    setSpeakerID("");
     setTalking(false);
     setSound(true);
     setElapsed(0);
@@ -407,22 +403,11 @@ export function useAlibi() {
         releaseMic();
         return true;
       }
-      // Existing browser setups can carry an older immediate-execution tool.
-      // Refresh the join policy before connecting, without another setup step.
-      const joinIndex = clientTools.findIndex(tool => tool.name === "join_character");
-      const joinToolID = toolIDs.current[joinIndex];
-      if (!joinToolID) throw new Error("ElevenLabs setup is incomplete. Prepare the agent in Settings first.");
       const [{ VoiceConversation }, token] = await Promise.all([
         import("@elevenlabs/react"),
         elevenRequest<{ token: string }>(
           `/v1/convai/conversation/token?agent_id=${encodeURIComponent(agentID)}`,
           apiKey.trim(),
-        ),
-        elevenRequest(
-          `/v1/convai/tools/${encodeURIComponent(joinToolID)}`,
-          apiKey.trim(),
-          { tool_config: clientTools[joinIndex] },
-          "PATCH",
         ),
       ]);
       if (!fence.current.accepts(epoch)) {
@@ -465,8 +450,8 @@ export function useAlibi() {
             },
             firstMessage:
               roster.current!.participants[0].voice.label === "default"
-                ? "Hey Jacob, what's up?"
-                : `<${roster.current!.participants[0].voice.label}>Hey Jacob, what's up?</${roster.current!.participants[0].voice.label}>`,
+                ? `Hey, it's ${initialPerson.name.split(" ")[0]}. What's up?`
+                : `<${roster.current!.participants[0].voice.label}>Hey, it's ${initialPerson.name.split(" ")[0]}. What's up?</${roster.current!.participants[0].voice.label}>`,
           },
         },
         clientTools: {
@@ -514,7 +499,6 @@ export function useAlibi() {
             if (openAIKeyRef.current.trim()) requestPortrait(p);
             return {
               joined: true,
-              pickup: "The ringing is finished. This person has just answered. Give only their brief pickup greeting now; do not announce another call.",
               id: joined.id,
               name: joined.name,
               personality: joined.personality,
@@ -588,10 +572,7 @@ export function useAlibi() {
                 : roster.current?.participants
                     .find((p) => p.voice.label === label)
                     ?.name.split(" ")[0] || "Cast";
-          if (m.role !== "user") {
-            setSpeaker(who);
-            setSpeakerID(attributedPersonId(m.message, roster.current?.participants || []));
-          }
+          if (m.role !== "user") setSpeaker(who);
           setTranscript((t) =>
             [
               ...t.filter((row) => row.id !== `${m.role}-${m.event_id}`),
@@ -739,8 +720,6 @@ export function useAlibi() {
     sound,
     talking,
     speaker,
-    speakerID,
-    readAudio,
     elapsed,
     preview,
     startLive,
