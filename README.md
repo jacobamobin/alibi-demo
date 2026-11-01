@@ -9,13 +9,35 @@ On desktop the call sits in the middle third, with People and Scene on the left 
 - Turn on the home-screen microphone to gather context before New call. Captured speech becomes the scene and is included automatically when calling.
 - Demo mute stops context capture and carries into a muted call. Live user speech updates the scene; the agent can replace it with a concise summary.
 - One ElevenLabs live agent performs the cast, with up to 10 voices including the default.
-- Characters can invite other fictional people. A simulated ring appears before each new person joins. An unnamed role such as a DJ can become a new full-name character with an individual personality and available voice.
+- Characters can suggest inviting other fictional people and wait for Jacob’s agreement. They announce the call before a short simulated ring, then the new person picks up. An unnamed role such as a DJ can become a new full-name character with an individual personality and available voice.
 - With an OpenAI key, newly invented people receive a synthetic portrait in the background. Monograms and live voices work immediately. Image jobs are bounded, deduplicated and cancelled when the call ends. Failed images keep the monogram.
 - Context includes a typed Message the call fallback for accessibility and reproducible demos; typed lines are labeled separately from microphone transcription.
+- Call audio drives one shared spectrum meter below the participants. Characters greet Jacob and allow quiet moments naturally.
 - Preview mode is silent and explicitly labeled. Portraits are static; there is no generated video.
 - API keys stay in the current tab's memory. Non-secret agent IDs and fictional character profiles are stored locally.
 - Add your own contact persona with a photo and short bio, or import one .vcf contact. Review, edit, save, call and invite it. Custom profiles and compressed portraits are stored in this browser’s IndexedDB.
 - Optional OpenAI drafting estimates a broad age range and suggests a personality and a prepared ElevenLabs voice. Pronouns and heritage are explicit editable details; the app does not infer race, ethnicity, nationality or gender identity from a face. Voice suggestions use sound preferences and the bio. Imported phone numbers and email addresses are discarded.
+
+## Screenshots
+
+Desktop Safari: the call in the middle third, with scene context and session activity alongside. This silent preview captures Leo ringing before pickup.
+
+![Alibi in desktop Safari with Owen, Maya and Leo](docs/screenshots/desktop-safari.png)
+
+<table>
+  <tr>
+    <th>Set the scene</th>
+    <th>Group call</th>
+    <th>AI-drafted contact</th>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/mobile-home.jpg" width="260" alt="Phone home screen with microphone and scene context"></td>
+    <td><img src="docs/screenshots/mobile-call.jpg" width="260" alt="Silent preview with Owen, Maya and saved contact Jamie"></td>
+    <td><img src="docs/screenshots/ai-contact.jpg" width="260" alt="Jamie Vale's reviewed synthetic contact profile with an age range, personality and Will voice"></td>
+  </tr>
+</table>
+
+Phone images use a 390 × 844 responsive browser viewport. The group call is a silent layout preview; Jamie’s saved profile was drafted with OpenAI from the synthetic demo photo and bio.
 
 ## Run locally
 

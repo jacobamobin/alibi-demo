@@ -6,7 +6,7 @@ type Events = {
 };
 const ring = (signal: AbortSignal) =>
   new Promise<void>((resolve, reject) => {
-    const timer = setTimeout(done, 2200);
+    const timer = setTimeout(done, 3400);
     function done() {
       signal.removeEventListener("abort", cancel);
       resolve();

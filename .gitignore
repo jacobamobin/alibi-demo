@@ -1,0 +1,28 @@
+# Credentials and personal device data
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.mobileprovision
+Secrets.*
+LocalConfig.*
+PrivateData/
+ImportedContacts/
+ImportedPhotos/
+
+# Xcode and Swift build output
+.DS_Store
+.build/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+
+# Local verification output
+artifacts/
+node_modules/
+.next/
+out/
+web/out/
+*.tsbuildinfo

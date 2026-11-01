@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { useAlibi } from "../lib/use-alibi";
 import { Avatar } from "./avatar";
+import { AudioSpectrum } from "./audio-spectrum";
 type Props = {
   app: ReturnType<typeof useAlibi>;
   onAdd: () => void;
@@ -62,7 +63,7 @@ export function CallScreen({ app, onAdd, onMore }: Props) {
         {cast.map((p) => {
           const ringing = app.ringing.some((x) => x.id === p.id);
           const speaking =
-            app.mode === "live" && app.talking && app.speaker === first(p.name);
+            app.mode === "live" && app.talking && app.speakerID === p.id;
           return (
             <div
               key={p.id}
@@ -82,16 +83,7 @@ export function CallScreen({ app, onAdd, onMore }: Props) {
                       : p.pronouns || "In call"}
               </span>
               {app.portraitState[p.id] === "pending" && !ringing && <small className="portrait-pending">Creating photo…</small>}
-              {ringing ? (
-                <Phone className="ring-phone" size={15} />
-              ) : (
-                <span className={`wa-voice ${speaking ? "animated" : ""}`}>
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                </span>
-              )}
+              {ringing && <Phone className="ring-phone" size={15} />}
             </div>
           );
         })}
@@ -105,11 +97,7 @@ export function CallScreen({ app, onAdd, onMore }: Props) {
         )}
       </div>
       <div className="wa-call-bottom">
-        <p>
-          {app.mode === "preview"
-            ? "Preview · no microphone or live audio"
-            : "Fictional people · AI voices"}
-        </p>
+        {app.mode === "preview" ? <p>Preview · no microphone or live audio</p> : <div className="call-spectrum"><AudioSpectrum read={app.readAudio} enabled={app.mode === "live" && app.sound} /></div>}
         <div className="wa-control-tray">
           <button
             className="control"
